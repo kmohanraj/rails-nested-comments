@@ -1,0 +1,13 @@
+<%= link_to(@article.title, @article, target: "_blank")%>(<%= @article.comments.count %>)<br/>
+<small>Submitted <%= time_ago_in_words(@article.created_at) %> ago </small> 
+
+<h3>Comments</h3>
+
+<%= form_for [@article, Comment.new] do |f| %>
+  <%= f.text_area :body, placeholder: "Add a Comment" %><br/>
+  <%= f.submit "Add Comment" %>
+<% end %>
+
+<ul>
+  <%= render @article.comments %>
+</dl>
