@@ -95,9 +95,11 @@ start rails server,
 rails s
 
 ```
+
+```ruby?line_numbers=false
 abhinav 098 nested comments
 
-
+```
 
 
 
